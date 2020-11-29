@@ -133,7 +133,7 @@ func processCommond(update *api.Update) {
 	_, _ = bot.DeleteMessage(api.NewDeleteMessage(update.Message.Chat.ID, upmsg.MessageID))
 	switch upmsg.Command() {
 	case "start", "help":
-		msg.Text = "本机器人能够自动回复特定关键词"
+		msg.Text = "欢迎来到‘骨朵摸您’我们的网站是：https://vpn-1.xyz"
 		sendMessage(msg)
 	case "add":
 		if checkAdmin(gid, *upmsg.From) {
